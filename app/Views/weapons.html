@@ -1,0 +1,9 @@
+<div ng-repeat="weapon in weapons" class="ListElement">
+		<h2>{{weapon.weaponName}}</h2>
+		<br>
+		<img src ="/Weapons/app/Views/Images/Weapon/{{weapon.weaponImage}}" alt='Image of a weapon'>
+		<br>
+		{{weapon.weaponDescription}}
+		<br>
+		<a href="#/Weapons/View/{{weapon.weaponId}}">Edit the details on this weapon.</a> <a href="#/Weapons/Delete/{{weapon.weaponId}}">Delete this weapon</a>
+</div>

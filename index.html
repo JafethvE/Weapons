@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Weapons!
+		</title>
+		
+		<script type="text/javascript" src="assets/libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="assets/libs/angular/angular-route.min.js"></script>
+		<script type="text/javascript" src="assets/libs/angular/ng-file-upload.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/Controllers/WeaponController.js"></script>
+		<script type="text/javascript" src="app/Services/WeaponService.js"></script>
+		<script type="text/javascript" src="app/Controllers/CategoryController.js"></script>
+		<script type="text/javascript" src="app/Services/CategoryService.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="/Weapons/app/Views/Stylesheets/stylesheet.css">
+	</head>
+
+	<body ng-app="weapons">
+		<div id="container">
+			<h1>{{"Welcome to this site about bladed weapons."}}</h1>
+			<div id="body" ng-view>
+				{{action}}
+			</div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+<label>Search: <input ng-model="searchText"></label>
+<div ng-repeat="weaponCategory in weaponCategories | filter:searchText" class="ListElement">
+		<h2>{{weaponCategory.weaponCategoryName}}</h2>
+		<br>
+		<img src ="app/Views/Images/Weapon/{{weaponCategory.weaponCategoryImage}}" alt='Image of a weapon of this category.'>
+		<br>
+		<p>{{weaponCategory.weaponCategoryDescription}}</p>
+		<a href="#/Weapons/Category/{{weaponCategory.weaponCategoryId}}">Come see our {{weaponCategory.weaponCategoryWeaponAmount}} {{weaponCategory.weaponCategoryName}}s.</a>
+</div>
+
+<a href="#/Weapons/Create/">Create new weapon.</a>

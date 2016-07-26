@@ -1,0 +1,16 @@
+<div ng-model="weapon" class="form">
+	<form ng-submit="updateWeapon()" name="UpdateWeapon">
+			<input type="hidden" name="weaponid" id="weaponid" value="{{weapon.weaponId}}" ng-model="weapon.weaponId" required>
+			<input type="text" id="weaponname" name="weaponname" value="{{weapon.weaponName}}" ng-model="weapon.weaponName"  required>
+			<img src ="/Weapons/app/Views/Images/Weapon/{{weapon.weaponImage}}" alt='Image of a weapon'>
+			<br>
+			<textarea id="weapondescription" name="weapondescription" rows="6" cols="30" ng-model="weapon.weaponDescription"  required>{{weapon.weaponDescription}}</textarea>
+			<br>
+			<p>Current category: {{weapon.weaponCategoryName}}</p>
+			<select name="weaponcategory" id="weaponcategory" ng-model="weapon.weaponCategory" convert-to-number  required>
+				<option ng-repeat="weaponCategory in weaponCategories" value="{{weaponCategory.weaponCategoryId}}">{{weaponCategory.weaponCategoryName}}</option>
+			</select>
+			<br>
+			<input type="submit" value="Submit" ng-disabled="UpdateWeapon.$invalid">
+		</form>
+</div>

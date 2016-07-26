@@ -1,0 +1,13 @@
+<div ng-model="weapon" class="form">
+	<form ng-submit="newWeapon()" name="NewWeapon">
+			<input type="text" id="weaponname" name="weaponname" value="" ng-model="weapon.weaponName" required>
+			<br>
+			<textarea id="weapondescription" name="weapondescription" rows="6" cols="30" ng-model="weapon.weaponDescription" required></textarea>
+			<br>
+			<select name="weaponcategory" id="weaponcategory" ng-model="weapon.weaponCategory" convert-to-number required>
+				<option ng-repeat="weaponCategory in weaponCategories" value="{{weaponCategory.weaponCategoryId}}">{{weaponCategory.weaponCategoryName}}</option>
+			</select>
+			<br>
+			<input type = "submit" value = "Submit" ng-disabled="NewWeapon.$invalid">
+		</form>
+</div>
